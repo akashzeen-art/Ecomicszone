@@ -1,0 +1,664 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:text-left {
+  text-align: left;
+}
+
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .rtl\:space-x-reverse > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
+/* Arabic Typography */
+.arabic-text {
+  font-family: 'Cairo', 'Noto Sans Arabic', 'Amiri', sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* RTL-specific margin and padding utilities */
+[dir="rtl"] .rtl\:mr-auto {
+  margin-right: auto;
+}
+
+[dir="rtl"] .rtl\:ml-auto {
+  margin-left: auto;
+}
+
+[dir="rtl"] .rtl\:pr-4 {
+  padding-right: 1rem;
+}
+
+[dir="rtl"] .rtl\:pl-4 {
+  padding-left: 1rem;
+}
+
+/* RTL Navigation fixes */
+[dir="rtl"] .navigation-item {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .mobile-menu {
+  text-align: right;
+}
+
+/* RTL Card layouts */
+[dir="rtl"] .card-content {
+  text-align: right;
+}
+
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* RTL Button alignments */
+[dir="rtl"] .btn-group {
+  flex-direction: row-reverse;
+}
+
+/* RTL Grid layouts */
+[dir="rtl"] .grid-rtl {
+  direction: rtl;
+}
+
+/* RTL Carousel fixes */
+[dir="rtl"] .carousel-container {
+  direction: rtl;
+}
+
+[dir="rtl"] .carousel-item {
+  text-align: right;
+}
+
+/* RTL Form elements */
+[dir="rtl"] input[type="text"],
+[dir="rtl"] input[type="email"],
+[dir="rtl"] textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] input::placeholder,
+[dir="rtl"] textarea::placeholder {
+  text-align: right;
+  direction: rtl;
+}
+
+/* RTL Search bar */
+[dir="rtl"] .search-input {
+  padding-right: 3rem;
+  padding-left: 1rem;
+  text-align: right;
+}
+
+[dir="rtl"] .search-icon {
+  right: auto;
+  left: 0.75rem;
+}
+
+/* RTL Modal and Dialog positioning */
+[dir="rtl"] .modal-content {
+  text-align: right;
+}
+
+/* RTL Dropdown menus */
+[dir="rtl"] .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+/* RTL Tooltips */
+[dir="rtl"] .tooltip {
+  text-align: right;
+}
+
+/* RTL Breadcrumbs */
+[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .breadcrumb-separator {
+  transform: scaleX(-1);
+}
+
+/* RTL Pagination */
+[dir="rtl"] .pagination {
+  flex-direction: row-reverse;
+}
+
+/* RTL Table headers */
+[dir="rtl"] table {
+  direction: rtl;
+}
+
+[dir="rtl"] th,
+[dir="rtl"] td {
+  text-align: right;
+}
+
+/* RTL Sidebar positioning */
+[dir="rtl"] .sidebar {
+  right: 0;
+  left: auto;
+}
+
+/* RTL Icon positioning in buttons */
+[dir="rtl"] .btn-with-icon {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .btn-with-icon .icon {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* RTL Progress bars */
+[dir="rtl"] .progress-bar {
+  direction: rtl;
+}
+
+/* RTL Tabs */
+[dir="rtl"] .tabs-list {
+  flex-direction: row-reverse;
+}
+
+/* RTL Accordion */
+[dir="rtl"] .accordion-trigger {
+  text-align: right;
+}
+
+[dir="rtl"] .accordion-content {
+  text-align: right;
+}
+
+/* RTL Alert positioning */
+[dir="rtl"] .alert {
+  text-align: right;
+}
+
+[dir="rtl"] .alert-icon {
+  margin-left: 0.75rem;
+  margin-right: 0;
+}
+
+/* RTL Badge positioning */
+[dir="rtl"] .badge {
+  text-align: center;
+}
+
+/* RTL Card layouts */
+[dir="rtl"] .card-header {
+  text-align: right;
+}
+
+[dir="rtl"] .card-footer {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+/* RTL List items */
+[dir="rtl"] .list-item {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+/* RTL Menu items */
+[dir="rtl"] .menu-item {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+/* RTL Select dropdown */
+[dir="rtl"] .select-trigger {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .select-content {
+  text-align: right;
+}
+
+/* RTL Checkbox and Radio positioning */
+[dir="rtl"] .checkbox-wrapper,
+[dir="rtl"] .radio-wrapper {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .checkbox-wrapper label,
+[dir="rtl"] .radio-wrapper label {
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+/* RTL Switch positioning */
+[dir="rtl"] .switch-wrapper {
+  flex-direction: row-reverse;
+}
+
+/* RTL Slider */
+[dir="rtl"] .slider {
+  direction: rtl;
+}
+
+/* RTL Command palette */
+[dir="rtl"] .command-input {
+  text-align: right;
+}
+
+[dir="rtl"] .command-item {
+  text-align: right;
+}
+
+/* RTL Calendar */
+[dir="rtl"] .calendar {
+  direction: rtl;
+}
+
+[dir="rtl"] .calendar-day {
+  text-align: center;
+}
+
+/* RTL Popover positioning */
+[dir="rtl"] .popover-content {
+  text-align: right;
+}
+
+/* RTL Sheet positioning */
+[dir="rtl"] .sheet-content {
+  text-align: right;
+}
+
+/* RTL Toast positioning */
+[dir="rtl"] .toast {
+  text-align: right;
+}
+
+/* RTL Context menu */
+[dir="rtl"] .context-menu-content {
+  text-align: right;
+}
+
+/* RTL Hover card */
+[dir="rtl"] .hover-card-content {
+  text-align: right;
+}
+
+/* RTL Menubar */
+[dir="rtl"] .menubar {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .menubar-content {
+  text-align: right;
+}
+
+/* RTL Navigation menu */
+[dir="rtl"] .navigation-menu-list {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navigation-menu-content {
+  text-align: right;
+}
+
+/* RTL Resizable panels */
+[dir="rtl"] .resizable-panel-group[data-direction="horizontal"] {
+  flex-direction: row-reverse;
+}
+
+/* RTL Scroll area */
+[dir="rtl"] .scroll-area-viewport {
+  direction: rtl;
+}
+
+/* RTL Separator */
+[dir="rtl"] .separator[data-orientation="vertical"] {
+  margin: 0 0.5rem;
+}
+
+/* RTL Toggle group */
+[dir="rtl"] .toggle-group {
+  flex-direction: row-reverse;
+}
+
+/* RTL specific animations */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+[dir="rtl"] .slide-in-right {
+  animation: slideInFromLeft 0.3s ease-out;
+}
+
+[dir="rtl"] .slide-in-left {
+  animation: slideInFromRight 0.3s ease-out;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Ensure touch targets are at least 44px */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+:root {
+  /* Updated to comic theme colors */
+  --comic-primary: #ff4c60;
+  --comic-secondary: #1e1e2f;
+  --comic-accent: #ffd93d;
+  --comic-background: #121212;
+  --comic-text: #ffffff;
+  --comic-text-muted: #b0b0b0;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Added comic-specific color utilities */
+  --color-comic-primary: var(--comic-primary);
+  --color-comic-secondary: var(--comic-secondary);
+  --color-comic-accent: var(--comic-accent);
+  --color-comic-background: var(--comic-background);
+  --color-comic-text: var(--comic-text);
+  --color-comic-text-muted: var(--comic-text-muted);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Enhanced magazine card shadows */
+  .comic-shadow {
+    box-shadow: 4px 4px 0px #ff4c60, 8px 8px 0px #1e1e2f;
+  }
+
+  .comic-border {
+    border: 3px solid #ff4c60;
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .speech-bubble {
+    position: relative;
+  }
+
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ffd93d;
+  }
+
+  /* 3D Carousel Utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #ff4c60;
+  }
+  50% {
+    box-shadow: 0 0 20px #ff4c60, 0 0 30px #ff4c60;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Smooth image loading animations */
+@keyframes image-fade-in {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.img-loading {
+  background: linear-gradient(90deg, #1E1E2F 0%, #2a2a3f 50%, #1E1E2F 100%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.img-loaded {
+  animation: image-fade-in 0.3s ease-out forwards;
+}
+
+/* Hardware acceleration for smooth scrolling */
+.gpu-accelerate {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Optimized image containers */
+.thumbnail-container {
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .img-loaded {
+    animation: none;
+  }
+}

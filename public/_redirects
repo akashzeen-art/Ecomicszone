@@ -1,0 +1,7 @@
+# Netlify redirects for Next.js static export
+# Handle client-side routing for all paths
+/*    /index.html   200
+
+# Handle 404 errors
+/*    404.html    404
+
