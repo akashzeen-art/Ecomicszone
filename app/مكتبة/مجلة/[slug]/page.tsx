@@ -36,7 +36,7 @@ export default async function LibraryMagazinePage({ params }: LibraryMagazinePag
       <section className="border-b border-white/5 bg-gradient-to-r from-[#FF4C60]/10 via-[#121212] to-[#FFD93D]/10 py-8">
         <div className="mx-auto px-4 max-w-6xl">
           <nav className="mb-2 text-sm text-[#B0B0B0]">
-            إيكوميكسزون <span className="mx-1">/</span> بيت <span className="mx-1">/</span> مكتبة{" "}
+            موسوعة القصص المصورة <span className="mx-1">/</span> بيت <span className="mx-1">/</span> مكتبة{" "}
             <span className="mx-1">/</span> مجلة <span className="mx-1">/</span>
             <span className="text-white">{magazine.title}</span>
           </nav>

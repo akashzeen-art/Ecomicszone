@@ -6,7 +6,7 @@ export const translations = {
     nav: {
       home: "بيت",
       library: "مكتبة",
-      logo: "إيكوميكسزون",
+      logo: "موسوعة القصص المصورة",
     },
     // Common
     common: {
@@ -25,7 +25,7 @@ export const translations = {
     // Home page
     home: {
       hero: {
-        title: "إيكوميكسزون",
+        title: "موسوعة القصص المصورة",
         subtitle: "انغمس في عالم المجلات المذهل حيث يصبح الأبطال أحياءً ولا تنتهي القصص أبدًا",
         cta: "اكتشف المجلة",
         magazines: "مجلة",
@@ -399,7 +399,7 @@ export const translations = {
         },
         digital: {
           title: "الثورة الرقمية",
-          description: "إيكوميكسزون تجلب المجلات إلى العصر الرقمي",
+          description: "موسوعة القصص المصورة تجلب المجلات إلى العصر الرقمي",
         },
       },
     },
@@ -458,7 +458,7 @@ export const translations = {
       newsletterDescription: "احصل على أحدث المجلات والتحديثات مباشرة إلى بريدك الإلكتروني.",
       emailPlaceholder: "بريدك الإلكتروني",
       subscribe: "اشترك",
-      copyright: "© 2024 إيكوميكسزون. جميع الحقوق محفوظة. مصمم بشغف لعشاق القصص المصورة.",
+      copyright: "© 2024 موسوعة القصص المصورة. جميع الحقوق محفوظة. مصمم بشغف لعشاق القصص المصورة.",
       terms: "الشروط والأحكام",
       privacy: "سياسة الخصوصية",
       email: "hello@e-magazine.com",

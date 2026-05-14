@@ -56,7 +56,7 @@ const timelineEvents = [
     id: 6,
     year: "2024",
     title: "الثورة الرقمية",
-    description: "إيكوميكسزون تجلب المجلات إلى العصر الرقمي",
+    description: "موسوعة القصص المصورة تجلب المجلات إلى العصر الرقمي",
     image: `${COMICS_API_BASE}/content/ecomics/historymagzine/6.png`,
     color: "#FF4C60",
   },

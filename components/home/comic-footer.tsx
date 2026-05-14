@@ -33,7 +33,7 @@ export function ComicFooter() {
                 <Zap className="w-7 h-7 text-white" />
               </div>
               <span className="font-bold text-[#FFD93D] group-hover:text-[#FF4C60] text-3xl transition-colors arabic-text">
-                إيكوميكسزون
+                موسوعة القصص المصورة
               </span>
             </Link>
             <p className="text-[#B0B0B0] leading-relaxed arabic-text">
@@ -87,7 +87,7 @@ export function ComicFooter() {
             transition={{ duration: 0.6 }}
             className="text-[#B0B0B0] text-sm arabic-text"
           >
-            © 2024 إيكوميكسزون. جميع الحقوق محفوظة. مصمم بشغف لعشاق القصص المصورة.
+            © 2024 موسوعة القصص المصورة. جميع الحقوق محفوظة. مصمم بشغف لعشاق القصص المصورة.
           </motion.div>
 
           <motion.div

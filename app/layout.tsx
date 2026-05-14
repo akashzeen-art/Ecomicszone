@@ -8,7 +8,7 @@ import { LanguageProvider } from "@/contexts/language-context"
 import { HtmlAttributes } from "@/components/html-attributes"
 
 export const metadata: Metadata = {
-  title: "إيكوميكسزون - وجهتك النهائية للمجلات",
+  title: "موسوعة القصص المصورة - وجهتك النهائية للمجلات",
   description: "اكتشف مجلات مذهلة وشخصيات وقصص في عالمنا التفاعلي للمجلات",
   generator: "v0.app",
 }
