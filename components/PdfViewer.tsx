@@ -391,6 +391,11 @@ export default function PDFViewer({ file }: { file: string }) {
 
 	// Fallback to embed/object if PDF loading fails - styled as webpage
 	if (error === 'fallback') {
+		// Detect Android/mobile - embed doesn't work on Android (triggers download)
+		const isAndroid = typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent)
+		const isMobile = typeof navigator !== 'undefined' && /android|iphone|ipad|ipod|mobile/i.test(navigator.userAgent)
+		const googleDocsUrl = `https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(decodedFile)}`
+
 		return (
 			<div className="flex flex-col h-screen bg-gray-900">
 				{/* Header with action buttons */}
@@ -398,40 +403,33 @@ export default function PDFViewer({ file }: { file: string }) {
 					<h2 className="font-bold text-white text-lg">View Magazine</h2>
 					<div className="flex gap-2">
 						<Button
-							onClick={scrollToTop}
-							variant="outline"
-							size="sm"
-							className="border-white/20 text-white hover:bg-white/10"
-						>
-							<ChevronUp className="w-4 h-4" />
-						</Button>
-						<Button
-							onClick={scrollToBottom}
-							variant="outline"
-							size="sm"
-							className="border-white/20 text-white hover:bg-white/10"
-						>
-							<ChevronDown className="w-4 h-4" />
-						</Button>
-						<Button
 							onClick={() => window.open(decodedFile, '_blank')}
 							variant="outline"
 							size="sm"
 							className="border-white/20 text-white hover:bg-white/10"
 						>
 							<ExternalLink className="mr-2 w-4 h-4" />
-							Open in New Window
+							Open
 						</Button>
 					</div>
 				</div>
-				{/* PDF embed - styled to look like webpage */}
+				{/* Use Google Docs Viewer on Android/mobile, embed on desktop */}
 				<div className="flex-1 overflow-hidden bg-[#0a0a0a]">
-					<embed
-						src={`${decodedFile}#toolbar=0&navpanes=0&scrollbar=1`}
-						type="application/pdf"
-						className="w-full h-full"
-						style={{ minHeight: 0 }}
-					/>
+					{isMobile ? (
+						<iframe
+							src={googleDocsUrl}
+							className="w-full h-full border-0"
+							allow="autoplay"
+							title="PDF Viewer"
+						/>
+					) : (
+						<embed
+							src={`${decodedFile}#toolbar=0&navpanes=0&scrollbar=1`}
+							type="application/pdf"
+							className="w-full h-full"
+							style={{ minHeight: 0 }}
+						/>
+					)}
 				</div>
 			</div>
 		)
