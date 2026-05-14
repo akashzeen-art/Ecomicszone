@@ -42,10 +42,10 @@ export function ComicFooter() {
 
             {/* Contact info */}
             <div className="space-y-2 mt-6 text-[#B0B0B0] text-sm">
-              <div className="flex items-center gap-3 rtl:flex-row-reverse">
+              {/* <div className="flex items-center gap-3 rtl:flex-row-reverse">
                 <Mail className="w-4 h-4 text-[#FF4C60]" />
                 <span className="arabic-text">hello@e-magazine.com</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3 rtl:flex-row-reverse">
                 <Phone className="w-4 h-4 text-[#FF4C60]" />
                 <span className="arabic-text">+1 (555) 123-4567</span>
